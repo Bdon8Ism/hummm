@@ -12,7 +12,7 @@ client.on('ready', function(){
  game: { 
     type: 1,
      url: 'https://www.twitch.tv/M07SEN',
-    name: 'im try banned ',  // الكلام الي في التوتش
+    name: 'TreeShop For Ever!!'لتوتش
     application_id: '518176101403459594', // ايدي البوت او ايدي الحساب حقك 
      assets: {
          large_image:   `${s[Math.floor(Math.random() * s.length)]}`,
