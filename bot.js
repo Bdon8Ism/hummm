@@ -6,14 +6,14 @@ client.on('ready', function(){
  console.log(`Logged in as ${client.user.tag}!`); 
    
   // var s = ['https://cdn.hyperdev.com/paste-me.svg?1477325869954']; // صور اضافيه
-   var s = ['screenshot_24'];  // صور  الي بتشغل
-    setInterval(function (){  
+var s = ['483063515981283354','483063446376677386','483063378726879232','483063354332545045','483063463179190293'];
+  setInterval(function (){  
     client.user.setPresence({
  game: { 
     type: 1,
      url: 'https://www.twitch.tv/M07SEN',
     name: 'TreeShop For Ever!!',
-    application_id: '523837716027277314', // ايدي البوت او ايدي الحساب حقك 
+    application_id: '477187715658547201', // ايدي البوت او ايدي الحساب حقك 
      assets: {
          large_image:   `${s[Math.floor(Math.random() * s.length)]}`,
  
