@@ -12,7 +12,7 @@ var s = ['483063515981283354','483063446376677386','483063378726879232','4830633
  game: { 
     type: 1,
      url: 'https://www.twitch.tv/M07SEN',
-    name: 'Tree Shop :)',
+    name: 'Tree Shop ❤❤😊 ',
     application_id: '477187715658547201', // ايدي البوت او ايدي الحساب حقك 
      assets: {
          large_image:   `${s[Math.floor(Math.random() * s.length)]}`,
