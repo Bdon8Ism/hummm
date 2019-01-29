@@ -20,7 +20,26 @@ var s = ['483063515981283354','483063446376677386','483063378726879232','4830633
     }
   }
     });
-    }, 5000);//سرعه تغير الصور  
+    }, 5000);//سرعه تغير الصور 
+});
+client.on('message', message => {
+    if (!message.content.startsWith(prefix)) return;
+    var args = message.content.split(' ');
+    var command = args[0];
+    switch (command) {
+        case "^clear":
+            if (message.channel.type !== "text") return message.reply("** This Command is Only For Servers | :x: **");
+            if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("** You Don't Have Access To Do This Command | :x: **");
+            if (!args[1]) args[1] = 100;
+            var count = parseInt(args[1]);
+            if (isNaN(count)) return message.reply("** You Have To Type Number | :x: **");
+            message.channel.bulkDelete(count).then(msgs => {
+                message.channel.send(`** Done ** | I have Deleted ${msgs.size} Messages ...`).then(m => m.delete(5000));
+                var x = 0;
+                var messages = msgs.map(m => `${++x} - ${m.author.tag}  :  ${m.content.split(" ").join(" ")}`).join(`
+`);
+            });
+    };
 });
     client.login(process.env.BOT_TOKEN);
 
